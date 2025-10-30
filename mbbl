@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://images.unsplash.com/photo-1622495893854-5fdc5e78d0d8?fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
+  }
+
+  h1 {
+    font-size: 2.7em;
+    color: #ffcc00;
+    text-align: left;
+    margin: 20px;
+    animation: glow 2s infinite alternate;
+  }
+
+  @keyframes glow {
+    from { text-shadow: 0 0 10px #00ff00; }
+    to { text-shadow: 0 0 25px #ffcc00; }
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    margin: 20px;
+    flex-wrap: wrap;
+  }
+
+  .left, .right {
+    width: 45%;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+  }
+
+  h2 {
+    color: #00ff00;
+    text-shadow: 1px 1px 5px #000;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  th, td {
+    border: 2px solid #ffcc00;
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    background-color: rgba(0,100,0,0.8);
+    color: #ffcc00;
+  }
+
+  td {
+    background-color: rgba(0,50,0,0.5);
+    color: #00ff00;
+  }
+
+  tr:hover td {
+    background-color: rgba(0,128,0,0.7);
+  }
+
+  .button {
+    background-color: #ffcc00;
+    color: #006400;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .button:hover {
+    background-color: #00ff00;
+    color: #000000;
+  }
+
+  .results {
+    margin-top: 20px;
+  }
+
+  input[type="text"] {
+    width: 80px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+  }
+
+  footer {
+    text-align: center;
+    color: #ffcc00;
+    margin-top: 30px;
+    text-shadow: 0 0 5px #000;
+  }
+
+  @media screen and (max-width: 900px) {
+    .wrapper {
+      flex-direction: column;
+    }
+    .left, .right {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h1>SYF Family Friendship MLBB Tournament</h1>
+
+<div class="wrapper">
+
+  <!-- Left: Group Tables -->
+  <div class="left">
+    <h2>Group A</h2>
+    <table>
+      <tr>
+        <th>Team</th><th>P</th><th>W</th><th>L</th><th>Pts</th>
+      </tr>
+      <tr><td><img src="https://i.imgur.com/7kQ5kG8.png" width="25"> SLPW</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td><img src="https://i.imgur.com/4hYpn0J.png" width="25"> LPW(HK)</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td><img src="https://i.imgur.com/ZkM3zVq.png" width="25"> YA</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+    </table>
+
+    <h2>Group B</h2>
+    <table>
+      <tr>
+        <th>Team</th><th>P</th><th>W</th><th>L</th><th>Pts</th>
+      </tr>
+      <tr><td><img src="https://i.imgur.com/w2nJQxK.png" width="25"> LPW(YK)</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td><img src="https://i.imgur.com/H7Z3UAT.png" width="25"> RO</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td><img src="https://i.imgur.com/EZkH8Ai.png" width="25"> TT</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+    </table>
+
+    <div class="results">
+      <p><strong>Qualified for Semi-Finals:</strong></p>
+      <p>Group A –  (Winner),  (Runner-up)</p>
+      <p>Group B –  (Winner),  (Runner-up)</p>
+    </div>
+  </div>
+
+  <!-- Right: Match Schedule -->
+  <div class="right">
+    <h2>Group Stage Matches</h2>
+    <table>
+      <tr><th>Match</th><th>Teams</th><th>Score</th></tr>
+      <td>1</td><td>SLPW vs LPW(HK)</td><td><input type="text" placeholder="0 - 0"></td></tr>
+      <td>2</td><td>SLPW vs YA</td><td><input type="text" placeholder="0 - 0"></td></tr>
+      <td>3</td><td>LPW(HK) vs YA</td><td><input type="text" placeholder="0 - 0"></td></tr>
+      <td>4</td><td>TT vs RO</td><td><input type="text" placeholder="0 - 0"></td></tr>
+      <td>5</td><td>TT vs LPW(YK)</td><td><input type="text" placeholder="0 - 0"></td></tr>
+      <td>6</td><td>RO vs LPW(YK)</td><td><input type="text" placeholder="0 - 0"></td></tr>
+    </table>
+
+    <button class="button" onclick="window.location.href='page1.html'">Go to Semi-Final Page</button>
+  </div>
+
+</div>
+
+<footer>© 2025 Friendship Tournament | Organized by MBBL Team</footer>
+
+</body>
+</html>
